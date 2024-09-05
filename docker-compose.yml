@@ -1,0 +1,21 @@
+version: "2"
+services:
+  demo_app_7:
+#    image: ruby:3.1.2
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pg_rail
+  pg_rail:
+    image: postgres:16.4
+    environment:
+      POSTGRES_DB: "pg_db_dev"
+      POSTGRES_USER: "pg"
+      POSTGRES_PASSWORD: "PgpG"
+#    ports:
+#      - "14789:5432"
+    volumes: 
+      - ./local_db:/var/lib/postgresql/data

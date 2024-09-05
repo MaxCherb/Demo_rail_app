@@ -1,0 +1,15 @@
+version: "2"
+services:
+  demo_app_7:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pg_db
+  pg_db: 
+    image: postgres:16
+    environment:
+#      - POSTGRES_USER: postgres
+      - POSTGRES_PASSWORD: postgres
+#      - POSTGRES_DB: myapp_devvelopment
+
