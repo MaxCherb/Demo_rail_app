@@ -2,9 +2,12 @@ name: Build and Push Docker Image
 
 on:
   push:
+    branches: 
+      - main
 
 jobs:
-  build: 
-    runs-on: ubuntu-latest
+  pushing: 
+    runs-on: ubuntu
     steps:
-      - 
+      - name: Greetings
+        run: echo "Hello, lets started test"
