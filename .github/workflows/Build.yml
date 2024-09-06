@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Greetings
         run: echo "Hello, lets started test"
+
+      - name: Building
+        uses: docker/setup-buildx-action@v3
