@@ -7,7 +7,7 @@ on:
 
 jobs:
   pushing: 
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Greetings
         run: echo "Hello, lets started test"
