@@ -11,3 +11,4 @@ RUN  bundle install --gemfile Gemfile
 COPY . .
 
 CMD ["./init_script.sh"]
+
