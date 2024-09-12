@@ -54,10 +54,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=user/app:buildcache
-          cache-to: type=registry,ref=user/app:buildcache,mode=max
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          cache-from: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache
+          cache-to: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache,mode=max
 
 
       
