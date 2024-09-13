@@ -5,4 +5,4 @@ stages:
 job_build:
   stage: greet
   script:
-    - echo "Hello my friend!"
+    - echo "Here we go again!"
