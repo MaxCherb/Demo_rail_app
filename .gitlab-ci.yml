@@ -1,0 +1,8 @@
+stages:
+  - greet
+
+
+job_build:
+  stage: greet
+  script:
+    - echo "Hello my friend!"
