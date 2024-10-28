@@ -1,4 +1,4 @@
-FROM ruby:3.1.2 as build
+FROM ruby-:3.1.2
 
 WORKDIR /app
 
