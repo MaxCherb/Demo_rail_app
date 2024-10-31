@@ -12,9 +12,9 @@ services:
   pg_rail:
     image: postgres:16.4
     environment:
-      POSTGRES_DB: "pg_db_dev"
-      POSTGRES_USER: "pg"
-      POSTGRES_PASSWORD: "PgpG"
+      POSTGRES_DB: <%= ENV['PRODUCTION_DATABASE'] %>
+      POSTGRES_USER: <%= ENV['DATABASE_USERNAME'] %> 
+      POSTGRES_PASSWORD: <%= ENV['DATABASE_PASSWORD'] %>
 #    ports:
 #      - "14789:5432"
     volumes: 
