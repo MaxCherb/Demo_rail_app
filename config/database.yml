@@ -9,10 +9,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
   timeout: 5000
-  host: pg_rail
+  host: <%= ENV['DATABASE_HOST'] %>
   port: 5432  
-  username: pg                    # User Name
-  password: PgpG 
+  username: <%= ENV['DATABASE_USERNAME'] %>                    # User Name
+  password: <%= ENV['DATABASE_PASSWORD'] %> 
 
 development:
   <<: *default
