@@ -60,7 +60,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: MaxCherb/Demo_rail_app:latest
+          tags: maxcherb/demo_rail_app:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache
           cache-to: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache,mode=max
