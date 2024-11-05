@@ -36,6 +36,8 @@ jobs:
       #setup buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with: 
+          version: v.0.8.2
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
       # - name: Extract metadata (tags, labels) for Docker
       #   id: meta
@@ -60,10 +62,7 @@ jobs:
         with:
           context: .
           push: true
-          # tags: ${{ steps.meta.outputs.tags }}
-          tags: |
-            registry.digitalocean.com/${{ steps.meta.outputs.tags }}
-            ghcr.io/${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache
           cache-to: type=registry,ref=ghcr.io/maxcherb/demo_rail_app:cache,mode=max
