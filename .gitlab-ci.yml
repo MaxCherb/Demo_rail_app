@@ -1,8 +1,0 @@
-stages:
-  - greet
-
-
-job_build:
-  stage: greet
-  script:
-    - echo "Here we go again!"
