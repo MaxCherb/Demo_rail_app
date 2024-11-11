@@ -12,3 +12,4 @@ COPY . .
 
 CMD ["./init_script.sh"]
 
+LABEL {"version" : "1.2.3" }
